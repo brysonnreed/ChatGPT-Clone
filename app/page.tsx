@@ -6,10 +6,12 @@ import {
 
 export default function HomePage() {
   return (
-    <main className="text-white flex flex-col items-center py-5 h-screen px-2 overflow-y-auto max-w-[90%]">
-      <h1 className="text-2xl sm:text-5xl font-bold mb-5 xs:mb-20">Chat GPT</h1>
+    <main className="text-white flex flex-col lg:justify-center items-center py-5 h-screen px-2 overflow-y-auto ">
+      <h1 className=" text-2xl sm:text-5xl font-bold mb-5 xs:mb-20">
+        Chat GPT
+      </h1>
 
-      <div className="flex space-x-2 text-center flex-col sm:flex-row space-y-5">
+      <div className="flex space-x-2 text-center flex-col sm:flex-row space-y-5 sm:space-y-0">
         <div>
           <div className="flex flex-col items-center justify-center mb-5">
             <SunIcon className="h-8 w-8" />
@@ -17,12 +19,14 @@ export default function HomePage() {
           </div>
 
           <div className="space-y-2">
-            <p className="infoText">&quot;Explain something to me&quot;</p>
+            <p className="infoText">
+              &quot;Explain something to me in baby terms&quot;
+            </p>
             <p className="infoText">
               &quot;What is the difference between a dog and a cat?&quot;
             </p>
             <p className="infoText">
-              &quot;What is the color of the sun?&quot;
+              &quot;How can I get better at coding in React?&quot;
             </p>
           </div>
         </div>
