@@ -1,91 +1,68 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import {
+  BoltIcon,
+  ExclamationTriangleIcon,
+  SunIcon,
+} from "@heroicons/react/24/outline";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function HomePage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+    <main className="text-white flex flex-col items-center py-5 h-screen px-2 overflow-y-auto max-w-[90%]">
+      <h1 className="text-2xl sm:text-5xl font-bold mb-5 xs:mb-20">Chat GPT</h1>
+
+      <div className="flex space-x-2 text-center flex-col sm:flex-row space-y-5">
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <SunIcon className="h-8 w-8" />
+            <h2>Examples</h2>
+          </div>
+
+          <div className="space-y-2">
+            <p className="infoText">&quot;Explain something to me&quot;</p>
+            <p className="infoText">
+              &quot;What is the difference between a dog and a cat?&quot;
+            </p>
+            <p className="infoText">
+              &quot;What is the color of the sun?&quot;
+            </p>
+          </div>
         </div>
-      </div>
+        <div>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <BoltIcon className="h-8 w-8" />
+            <h2>Capabilities</h2>
+          </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
+          <div className="space-y-2">
+            <p className="infoText">
+              Remembers what user said earlier in the conversation
+            </p>
+            <p className="infoText">
+              Allows user to provide follow-up corrections
+            </p>
+            <p className="infoText">
+              Trained to decline inappropriate requests
+            </p>
+          </div>
         </div>
-      </div>
+        <div>
+          <div className="flex flex-col items-center justify-center mb-5">
+            <ExclamationTriangleIcon className="h-8 w-8" />
+            <h2>Limitations</h2>
+          </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <div className="space-y-2">
+            <p className="infoText">
+              May occasionally generate incorrect information
+            </p>
+            <p className="infoText">
+              May occasionally produce harmful instructions or biased content
+            </p>
+            <p className="infoText">
+              Limited knowledge of world and events after 2021
+            </p>
+          </div>
+        </div>
       </div>
     </main>
-  )
+  );
 }
