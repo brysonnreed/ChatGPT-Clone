@@ -7,7 +7,7 @@ import {
 export default function HomePage() {
   return (
     <main className="text-white flex flex-col lg:justify-center items-center py-5 h-screen px-2 overflow-y-auto ">
-      <h1 className=" text-2xl sm:text-5xl font-bold mb-5 xs:mb-20">
+      <h1 className=" text-2xl sm:text-5xl font-bold mb-5 sm:mb-20">
         Chat GPT
       </h1>
 
