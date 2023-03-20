@@ -20,15 +20,13 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body>
+      <body className="bg-[#36393e]">
         <SessionProvider session={session}>
           {!session ? (
             <Login />
           ) : (
             <div className="flex">
-              <div className="bg-[#282b30] max-w-xs h-screen overflow-y-auto md:min-w-[20rem]">
-                <SideBar />
-              </div>
+              <SideBar />
 
               {/* Client Provide - Notification */}
               <ClientProvider />

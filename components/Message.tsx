@@ -9,7 +9,11 @@ function Message({ message }: Props) {
   const isChatGPT = message.user.name === "ChatGPT";
 
   return (
-    <div className={`py-5 text-white ${isChatGPT && "bg-[#424549]"}`}>
+    <div
+      className={`py-5 text-white border-l border-[#424549] ${
+        isChatGPT && "bg-[#424549]"
+      }`}
+    >
       <div className="flex space-x-5 px-5 sm:px-10 max-w-4xl sm:mx-auto ">
         <Image
           src={message.user.avatar}
